@@ -6,6 +6,7 @@ import Login from './components/login';
 import './App.css';
 import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider} from './context/Authcontext';
+import Signup from './components/signup';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Router>
        <Switch>
          <Route path="/login" exact component={Login}></Route>
+         <Route path="/signup" exact component={Signup}></Route>
          <PrivateRoute path="/"  component={Feeds}></PrivateRoute>
        </Switch>
       </Router>
